@@ -1,0 +1,7 @@
+使用说明[Windows]：
+    使用前需要填写host_list.xlsx,添加需要操作的内容,右键使用管理员权限运行ssh_login.exe即可.
+    * 由于直接调用socket发包,普通用户没有权限这样操作,必须是超级管理员.
+
+使用说明[Linux]：
+    使用前需要填写host_list.txt,添加需要操作的内容,执行chmod +x ssh_login增加执行权限,然后使用root用户执行./ssh_login或者sudo ./ssh_login运行即可.
+    * 由于直接调用socket发包,普通用户没有权限这样操作,必须是root用户.
