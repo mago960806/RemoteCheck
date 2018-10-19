@@ -1,7 +1,6 @@
 import os
 import re
 import socket
-import platform
 from configparser import RawConfigParser
 from concurrent.futures import ThreadPoolExecutor
 
@@ -180,7 +179,7 @@ def check(host_info):
 
 
 def one_thread_run(host_lists):
-    # 06:36
+
     for host_info in tqdm(host_lists, desc='Checking', ascii=True):
         check(host_info)
 
@@ -267,14 +266,7 @@ def map_with_multi_thread_output_excle(host_lists):
 
 if __name__ == '__main__':
     # 不同操作系统读取的文件不同
-    if platform.system() == 'Windows':
-        host_list = read_excle()
-    else:
-        try:
-            host_list = read_file()
-        except FileNotFoundError:
-            print('请创建host_list.txt文件并写入需要核查的数据')
-            exit(1)
+    host_list = read_excle()
     # 开启多线程执行check函数
     map_with_multi_thread_output_excle(host_list)
     input('Press <Enter> exit...')
