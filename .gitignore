@@ -122,12 +122,6 @@ dmypy.json
 .idea
 
 # other file
-ThreadPool.py
-ThreadDemo.py
-Thread.txt
-RemoteCheck.exe
-test.py
-asyn_run.py
-Check.py
-PortCheck.conf
-PortCheck.py
+demo/
+release/
+
